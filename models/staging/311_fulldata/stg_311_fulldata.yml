@@ -1,0 +1,28 @@
+version: 2
+
+models:
+    - name: stg_agency_dim
+      description: Agency dimension staging model from 311 open data.  
+      columns:
+          - name: agency_dim_id
+            description: "Unique Key in file -- The primary key for this table"
+            tests:
+                - unique
+                - not_null
+    - name: stg_location_dim
+      description: Location dimension staging model from 311 open data.  
+      columns:
+          - name: unique_id
+            description: "Unique Key in file -- The primary key for this table"
+            tests:
+                - unique
+                - not_null
+    - name: stg_compplaint_type_dim
+      description: Comaplint type dimension staging model from 311 open data.
+      columns:
+          - name: unique_id
+            description: "Unique Key in file -- The primary key for this table"
+            tests:
+                - unique
+                - not_null
+        
