@@ -3,7 +3,7 @@ with complaint_type_dim as(
         unique_key,
         complaint_type,
         descriptor
-    from `group5-proj-4400.311_data.src_311_rodent`
+    from {{ source('311_fulldata', 'stg_complaint_type_dim') }}
 )
 
 select * from complaint_type_dim

@@ -37,3 +37,4 @@ models:
       +materialized: view
     rodent_inspection:
       +materialized: view
+

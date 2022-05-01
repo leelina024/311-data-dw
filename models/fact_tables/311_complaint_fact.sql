@@ -14,6 +14,6 @@ final as (
     select
         *
     from agency_dim
-    left join complaint_type_dim using (unique_id)
+    left join complaint_type_dim using (unique_key)
 )
 select * from final

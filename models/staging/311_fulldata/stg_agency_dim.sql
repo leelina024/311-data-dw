@@ -1,9 +1,9 @@
-with agency as (
+with agency_dim as (
     select
-        unique_key as agency_dim_id
+        unique_key,
         agency,
         agency_name, 
-    from `group5-proj-4400.311_data.src_311_rodent`
+    from {{ source('311_fulldata', 'stg_agency_dim') }}
 )
 
-select * from agency
+select * from agency_dim
