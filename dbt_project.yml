@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'cis4400_final_proj'
+name: 'cis4400_proj'
 version: '1.0.0'
 config-version: 2
 
@@ -32,9 +32,15 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  cis4400_final_proj:
-    staging:
-      +materialized: view
+  cis4400_proj:
+    311_data:
+      +database: group-proj-4400
+      +schema: 311_data
+      staging:
+        +database: group-proj-4400
+        +schema: 311_data
+        +materialized: view
+      fact_tables:
+        +materialized: table
     rodent_inspection:
-      +materialized: view
-
+        +materialized: view

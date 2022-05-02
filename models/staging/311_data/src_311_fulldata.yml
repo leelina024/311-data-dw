@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: 311_data
+    tables:
+      - name: stg_agency
+        database: group5-proj-4400
+        schema: 311_data
+        columns:
+          - name: unique_key
+            tests: 
+              - unique
+              - not_null
+      - name: stg_location
+        columns:
+          - name: unique_key
+            tests: 
+              - unique
+              - not_null
+      - name: stg_complaint_type
+      - name: stg_channel_type
+      - name: stg_created_date
+      - name: stg_closed_date
+  - name: rodent_inspection
