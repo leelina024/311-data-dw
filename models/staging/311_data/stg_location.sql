@@ -7,7 +7,7 @@ with location as (
         borough, 
         city,
         zip_code
-    from `group5-proj-4400.311_data.stg_location`
+    from {{ source('311_data', 'stg_location') }}
 )
 
 select * from location

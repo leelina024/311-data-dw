@@ -34,13 +34,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   cis4400_proj:
     311_data:
-      +database: group-proj-4400
+      +database: group5-proj-4400
       +schema: 311_data
       staging:
-        +database: group-proj-4400
-        +schema: 311_data
         +materialized: view
       fact_tables:
         +materialized: table
     rodent_inspection:
-        +materialized: view
+      +database: group5-proj-4400
+      +schema: rodent_inspection
+        staging:
+          +materialized: view

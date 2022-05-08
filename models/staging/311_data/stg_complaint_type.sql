@@ -3,7 +3,7 @@ with complaint_type as(
         unique_key,
         complaint_type,
         descriptor
-    from `group5-proj-4400.311_data.stg_complaint_type`
+    from {{ source('311_data', 'stg_complaint_type') }}
 )
 
 select * from complaint_type
