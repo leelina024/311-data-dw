@@ -43,5 +43,5 @@ models:
     rodent_inspection:
       +database: group5-proj-4400
       +schema: rodent_inspection
-        staging:
-          +materialized: view
+      staging:
+        +materialized: view
