@@ -1,6 +1,6 @@
 with complaint_type as(
     select
-        unique_key,
+        ROW_NUMBER() OVER() AS complaint_type_dim_id,
         complaint_type,
         descriptor
     from {{ source('311_data', 'stg_complaint_type') }}

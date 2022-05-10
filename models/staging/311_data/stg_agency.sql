@@ -1,6 +1,6 @@
 with agency as (
     select
-        unique_key,
+        ROW_NUMBER() OVER() AS agency_dim_id,
         agency,
         agency_name, 
     from {{ source('311_data', 'stg_agency') }}

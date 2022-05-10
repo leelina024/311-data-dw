@@ -33,15 +33,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   cis4400_proj:
-    311_data:
-      +database: group5-proj-4400
-      +schema: 311_data
-      staging:
-        +materialized: view
-      fact_tables:
-        +materialized: table
-    rodent_inspection:
-      +database: group5-proj-4400
-      +schema: rodent_inspection
-      staging:
-        +materialized: view
+    staging:
+      +materialized: view
+    fact_tables:
+      +materialized: table

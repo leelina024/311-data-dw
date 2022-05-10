@@ -1,0 +1,10 @@
+version: 2
+
+models:
+    - name: stg_inspection_type
+      description: Inspection type for rodent inpsections -- BAIT, STOPPAGE, COMPLIANCE, CLEAN_UPS, INITIAL
+    - name: stg_job
+      description: Job ticket ID for each rodent inpsection. 
+    - name: stg_result
+      description: Result of rodent inpsection -- Bait Applied, Monitoring Visit, Stoppage done, Rat Activity, Passed, Failed for Other R, Cleanup done. 
+

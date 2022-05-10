@@ -1,28 +1,28 @@
 with complaint_type as (
-    select * from {{ ref('stg_complaint_type') }}
+    select * from `group5-proj-4400.311_data.stg_complaint_type`
 ),
 
 agency as (
-    select * from {{ ref('stg_agency') }}
+    select * from `group5-proj-4400.311_data.stg_agency`
 ),
 
 location as (
-    select * from {{ ref('stg_location') }}
+    select * from `group5-proj-4400.311_data.stg_location`
 ),
 
 channel as (
-    select * from {{ ref('stg_channel_type') }}
+    select * from `group5-proj-4400.311_data.stg_channel_type`
 ),
 
 created as (
     select unique_key, 
         FORMAT_DATETIME("%b-%d-%Y", created_date) as created_date
-    from {{ ref('stg_closed_date') }}
+    from `group5-proj-4400.311_data.stg_created_date`
 ),
 closed as (
     select unique_key, 
         FORMAT_DATETIME("%b-%d-%Y", closed_date) as closed_date
-    from {{ ref('stg_closed_date') }}
+    from `group5-proj-4400.311_data.stg_closed_date`
 ),
 
 final as (
@@ -37,4 +37,3 @@ final as (
 )
 
 select * from final
-
