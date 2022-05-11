@@ -1,15 +1,17 @@
-Welcome to your new dbt project!
+### Developing a data warehouse project.
 
-### Using the starter project
+Using dbt Cloud as our transformation (ETL) tool and Google BigQuery as our designated data warehouse. 
 
-Try running the following commands:
-- dbt run
-- dbt test
+------------
+#### The data we chose were from NYC OpenData: 
 
+|Data|Source|
+| ------------ | ------------ |
+|NYC 311 Service Requests |[data.cityofnewyork.us/Social-Services](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9 "data.cityofnewyork.us")|
+|NYC Rodent Inspection|[data.cityofnewyork.us/Health/Rodent-Inspection](https://data.cityofnewyork.us/Health/Rodent-Inspection/p937-wjvj "data.cityofnewyork.us/Health/Rodent-Inspection")|
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](http://community.getbdt.com/) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+- Cleanup and transformation of data was done through dbt Cloud.
+- Creating dimension tables, populating dimension tables, and creating and populating fact tables were all done through dbt Cloud.
+
+------------
+#### Data Visualization using Tableau
