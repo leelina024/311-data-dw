@@ -3,5 +3,4 @@ SELECT
     open_data_channel_type
 FROM  
    ( SELECT DISTINCT open_data_channel_type
-     FROM {{ source('311_data', 'stg_channel_type') }}
-    )
+        from {{ source('311_data', 'stg_channel_type') }}

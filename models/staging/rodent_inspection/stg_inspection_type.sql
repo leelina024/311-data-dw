@@ -1,6 +1,6 @@
 SELECT 
-	ROW_NUMBER() OVER() AS INSPECTION_TYPE_DIM_ID, 
-	JOB_ID,
-	INSPECTION_TYPE,
-	INSPECTION_DATE
-FROM `group5-proj-4400.rodent_inspections.src_rodent_insp`
+    row_number() OVER () AS inspection_type_dim_id,
+    INSPECTION_TYPE
+FROM  
+   ( SELECT DISTINCT INSPECTION_TYPE
+        from {{ source('rodent_inspection', 'stg_inspection_type') }}

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: rodent_inspection
+    tables:
+      - name: stg_job
+      - name: stg_result
+      - name: stg_inspection_type

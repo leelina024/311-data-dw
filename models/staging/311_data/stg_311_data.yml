@@ -9,18 +9,10 @@ models:
             tests:
                 - unique
                 - not_null
-    - name: stg_location
-      description: Location dimension staging model from 311 open data.  
-      columns:
-          - name: unique_id
-            description: "Unique Key in file -- The primary key for this table"
-            tests:
-                - unique
-                - not_null
     - name: stg_complaint_type
       description: Comaplint type dimension staging model from 311 open data.
       columns:
-          - name: unique_id
+          - name: complaint_type_dim_id
             description: "Unique Key in file -- The primary key for this table"
             tests:
                 - unique
@@ -28,23 +20,7 @@ models:
     - name: stg_channel_type
       description: Channel type of complaint (mobile, phone, online, other, unknown)
       columns:
-          - name: unique_id
-            description: "Unique Key in file -- The primary key for this table"
-            tests:
-                - unique
-                - not_null
-    - name: stg_created_date
-      description: Complaint created date. 
-      columns:
-          - name: unique_id
-            description: "Unique Key in file -- The primary key for this table"
-            tests:
-                - unique
-                - not_null
-    - name: stg_closed_date
-      description: Complaint closed date.
-      columns:
-          - name: unique_id
+          - name: channel_type_dim_id
             description: "Unique Key in file -- The primary key for this table"
             tests:
                 - unique
