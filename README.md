@@ -1,6 +1,6 @@
 ### Developing a data warehouse project.
 
-Using dbt Cloud as our transformation (ETL) tool and Google BigQuery as our designated data warehouse. 
+Using dbt Cloud as our transformation (ETL pipeline) tool and Google BigQuery as our designated data warehouse. 
 
 ------------
 #### The data we chose were from NYC OpenData: 
